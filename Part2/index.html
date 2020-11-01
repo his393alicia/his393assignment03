@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chota@0.5.2/dist/chota.min.css">
+    <link href="../Part1/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main>
+        <nav>
+            <h1>Your Name ❤ Dynamic DOM Tricks</h1>
+        </nav>
+        
+        <section class="sidebar">
+        </section>
+        <article id="boxes">
+            <div id="box1" class="box"></div>
+            <div id="box2" class="box"></div>
+            <div id="box3" class="box"></div>
+            <div id="box4" class="box"></div>
+            <div id="box5" class="box"></div>
+            <div id="box6" class="box"></div>
+            <div id="box7" class="box"></div>
+            <div id="box8" class="box"></div>
+        </article>
+        <aside></aside>
+        </main>
+        <script
+	    src="http://code.jquery.com/jquery-3.3.1.min.js "
+	    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	    crossorigin=" anonymous "></script>
+        <script src="./02-dom-tricks.js"></script>
+        <script>
+         function makeChanges () {
+             secondBoxBlue();
+             navBorderBottom();
+             evenBoxesText();
+             oddBoxesHtml();
+             modifyNav();
+         }
+         window.onload = makeChanges;
+        </script>
+    </body>
+</html>
