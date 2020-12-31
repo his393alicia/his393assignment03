@@ -32,7 +32,8 @@ function wikiLink (name) {
  * @returns {string} modified HTML content
  */
 function wikifyElementHtml (element) {
-  return '';
+  element.innerHTML = wikiLink(element.innerText)
+  return element
 }
 
 
