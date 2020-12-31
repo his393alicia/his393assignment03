@@ -50,7 +50,9 @@ function wikifySelector(selector) {
   // loop through that list
   // and inside the loop do
   // call wikifyElementHtml on each element
-  
+  const list = $(selector)
+  for (i=0; i<list.length; i++) 
+  wikifyElementHtml(list[i])
 };
   
 
