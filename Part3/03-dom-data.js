@@ -19,7 +19,7 @@ function wikiUrl (name) {
  * @returns {} 
  */
 function wikiLink (name) {
-  return '';
+  return `<a href="${wikiUrl(name)}">${name}</a>`
   // return $()
 }
 
