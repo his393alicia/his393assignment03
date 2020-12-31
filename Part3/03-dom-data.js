@@ -7,7 +7,7 @@
  * @returns {string} of form https://en.Wikipedia.org/wiki/name
  */
 function wikiUrl (name) {
-  return '';
+  return 'https://en.wikipedia.org/wiki/{name}'.replace('{name}',name)
 }
 
 
