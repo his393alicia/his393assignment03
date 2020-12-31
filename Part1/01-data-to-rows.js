@@ -105,7 +105,7 @@ leaders = [biko, tambo, mandela, tutu, ngoyi, sobukwe, goldberg, first];
  * @returns {string} 
  */
 function tagIt(content, tagName) {
-  return '';
+  return`<${tagName}>${content}</${tagName}>`
 }
 
 
@@ -136,7 +136,19 @@ function tagIt(content, tagName) {
  * @returns {string} 
  */
 function personRow (person) {
-  return '';
+  const name = tagIt(person.name, 'td')
+  const quote = tagIt(person.quote, 'td')
+  const born = tagIt(person.born, 'td')
+  const died = tagIt(person.died, 'td')
+  let affiliations = ''
+  if (person.affiliations instanceof Array) {
+  affiliations = tagIt(person.affiliations.toString(),'td')
+  } else if (typeof person.affiliations === 'string') {
+    affiliations = tagIt(person.affiliations,'td')
+  }
+  const tableContent =
+  name.concat(born).concat(died).concat(affiliations).concat(quote)
+  return tagIt(tableContent, 'tr')
 }
 
 
@@ -170,8 +182,13 @@ function personRow (person) {
  * @returns {} string
  */
 function peopleRows (people) {
-  return '';
+  let result = ``
+  for (i=0; i<people.length;i++){
+    result += personRow(people[i])
+  }
+  return tagIt(result,'table');
 }
+
 
 
 
